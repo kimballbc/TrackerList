@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+    tools:context=".ShoppingFragment">
+
+    <TextView
+        android:id="@+id/shoppingAppNameTextView"
+        style="@style/app_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tab_3_name" />
+
+    <EditText
+        android:id="@+id/shoppingAddItemEditText"
+        style="@style/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shoppingAppNameTextView"
+        android:hint="@string/add_an_item"
+        android:padding="20dp" />
+
+    <LinearLayout
+        android:id="@+id/shoppingButtonLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shoppingAddItemEditText"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/shoppingAddButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight=".33"
+            android:text="@string/add_button" />
+
+        <Button
+            android:id="@+id/shoppingDeleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight=".33"
+            android:text="@string/delete_button" />
+
+        <Button
+            android:id="@+id/shoppingClearButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight=".33"
+            android:text="@string/clear_button" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/shoppingAppSubtitleTextView"
+        style="@style/app_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shoppingButtonLinearLayout"
+        android:text="@string/tab_3_subtitle" />
+
+    <ListView
+        android:id="@+id/shoppingTrackerListView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/shoppingAppSubtitleTextView"
+        android:choiceMode="multipleChoice" />
+
+</RelativeLayout>
