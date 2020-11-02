@@ -3,13 +3,15 @@ package com.example.trackerlist
 import Adapter
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.viewpager.widget.ViewPager
+import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
-import com.google.android.material.tabs.TabLayout.TabLayoutOnPageChangeListener
+import com.google.android.material.tabs.TabLayoutMediator
+import java.lang.IllegalArgumentException
+
 class MainActivity : AppCompatActivity() {
     lateinit var tabLayout: TabLayout
-    lateinit var viewPager: ViewPager
+    lateinit var viewPager: ViewPager2
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,18 +19,25 @@ class MainActivity : AppCompatActivity() {
         title = "Tracker Keeper!"
         tabLayout = findViewById(R.id.tabLayout)
         viewPager = findViewById(R.id.viewPager)
-        tabLayout.addTab(tabLayout.newTab().setText(resources.getString(R.string.tab_1_name)))
-        tabLayout.addTab(tabLayout.newTab().setText(resources.getString(R.string.tab_2_name)))
-        tabLayout.addTab(tabLayout.newTab().setText(resources.getString(R.string.tab_3_name)))
         tabLayout.tabGravity = TabLayout.GRAVITY_FILL
-        val adapter = Adapter(this, supportFragmentManager,
-            tabLayout.tabCount)
+        val adapter = Adapter(
+            this,
+            3
+        )
         viewPager.adapter = adapter
-        viewPager.addOnPageChangeListener(TabLayoutOnPageChangeListener(tabLayout))
+        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            tab.text = when (position) {
+                0 -> resources.getString(R.string.tab_1_name)
+                1 -> resources.getString(R.string.tab_2_name)
+                2 -> resources.getString(R.string.tab_3_name)
+                else -> throw IllegalArgumentException("No name, no identity")
+            }
+        }.attach()
         tabLayout.addOnTabSelectedListener(object : OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
                 viewPager.currentItem = tab.position
             }
+
             override fun onTabUnselected(tab: TabLayout.Tab) {}
             override fun onTabReselected(tab: TabLayout.Tab) {}
         })

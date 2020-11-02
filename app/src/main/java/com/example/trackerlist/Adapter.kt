@@ -1,19 +1,19 @@
 import android.content.Context
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentPagerAdapter
+import androidx.fragment.app.FragmentActivity
+import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.trackerlist.HomeFragment
 import com.example.trackerlist.ShoppingFragment
 import com.example.trackerlist.WorkFragment
+import java.lang.IllegalArgumentException
 
 @Suppress("DEPRECATION")
 internal class Adapter(
-    var context: Context,
-    fm: FragmentManager,
+    fm: FragmentActivity,
     var totalTabs: Int
 ) :
-    FragmentPagerAdapter(fm) {
-    override fun getItem(position: Int): Fragment {
+    FragmentStateAdapter(fm) {
+    override fun createFragment(position: Int): Fragment {
         return when (position) {
             0 -> {
                 WorkFragment()
@@ -24,10 +24,10 @@ internal class Adapter(
             2 -> {
                 ShoppingFragment()
             }
-            else -> getItem(position)
+            else -> throw IllegalArgumentException("How did you find me?")
         }
     }
-    override fun getCount(): Int {
+    override fun getItemCount(): Int {
         return totalTabs
     }
 }
