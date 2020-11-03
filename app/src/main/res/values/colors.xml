@@ -11,4 +11,7 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="yellow">#FFFFCC</color>
+    <color name="dark_mode_selected_tab">#9e588c</color>
+    <color name="tab_background">#1db995</color>
+
 </resources>
