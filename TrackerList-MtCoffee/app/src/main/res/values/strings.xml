@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TrackerList</string>
+    <string name="tab_1_name">Work Tracker</string>
+    <string name="tab_2_name">Home Tracker</string>
+    <string name="tab_3_name">Shopping Tracker</string>
+    <string name="add_an_item">Add An Item</string>
+    <string name="add_button">Add</string>
+    <string name="delete_button">Delete</string>
+    <string name="clear_button">Clear</string>
+    <string name="tab_1_subtitle">Stuff to get done at work</string>
+    <string name="tab_2_subtitle">House chores</string>
+    <string name="tab_3_subtitle">Don\'t forget to buy me</string>
+</resources>

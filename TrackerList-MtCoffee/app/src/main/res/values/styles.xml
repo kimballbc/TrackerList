@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="app_name">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="edit_text">
+        <item name="android:textColorHint">@color/black</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="app_subtitle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="layout_background">
+        <item name="android:background">@color/yellow</item>
+    </style>
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/black</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabTextAppearance">@style/MyCustomTabTextAppearance</item>
+        <item name="tabSelectedTextColor">@color/black</item>
+    </style>
+
+    <style name="MyCustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textColor">@color/black</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+</resources>
