@@ -1,11 +1,9 @@
 package com.example.trackerlist
 
-import androidx.test.espresso.Espresso.onData
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.*
-import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.*
-import org.hamcrest.Matchers.allOf
+import org.hamcrest.core.AllOf.allOf
 
 fun addItem(func: AddItemRobot.() -> Unit) = AddItemRobot().apply { func() }
 
@@ -18,13 +16,7 @@ class AddItemRobot {
         onView(withId(R.id.workAddButton))
             .perform(click())
 
-//        onView(withId(R.id.workTrackerListView))
-//            .check(matches(hasChild(withText(text))))
-//        onData(withId(R.id.workTrackerListView))
-//            .onChildView(withText("keys"))
-
-        onView(allOf(withId(R.id.workTrackerListView)))
-            .check(matches(hasSibling((withText("keys")))))
+        onView(allOf(withId(R.id.workTrackerListView), hasSibling(withText(ItemData.KEYS.item))))
         
 
 
