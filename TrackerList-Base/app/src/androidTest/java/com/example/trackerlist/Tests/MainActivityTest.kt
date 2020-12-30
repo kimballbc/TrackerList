@@ -1,7 +1,10 @@
-package com.example.trackerlist
+package com.example.trackerlist.Tests
 
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.example.trackerlist.MainActivity
+import com.example.trackerlist.R
+import com.example.trackerlist.Robots.mainRobot
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -22,7 +25,7 @@ class MainActivityTest {
     @Test
     fun swipeToHomeTracker(){
         mainRobot {
-            swipeToHomeTracker(R.id.workTrackerListView,R.id.workAppNameTextView, "Work Tracker")
+            swipeToHomeTracker(R.id.workTrackerListView, R.id.workAppNameTextView, "Work Tracker")
         }
     }
 }

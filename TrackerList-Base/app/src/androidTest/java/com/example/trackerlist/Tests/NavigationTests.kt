@@ -1,7 +1,10 @@
-package com.example.trackerlist
+package com.example.trackerlist.Tests
 
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.example.trackerlist.MainActivity
+import com.example.trackerlist.R
+import com.example.trackerlist.Robots.navigate
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -15,7 +18,7 @@ class NavigationTests {
     fun homeTrackerScreenDisplaysWhenHomeTrackerTabIsTapped() {
         navigate {
             goToHomeTracker()
-            matchScreen(R.id.homeAppSubtitleTextView,"House chores")
+            matchScreen(R.id.homeAppSubtitleTextView, "House chores")
         }
     }
 
@@ -23,7 +26,7 @@ class NavigationTests {
     fun shoppingTrackerScreenDisplaysWhenShoppingTrackerTabIsTapped() {
         navigate {
             goToShoppingTracker()
-            matchScreen(R.id.shoppingAppSubtitleTextView,"Don't forget to buy me")
+            matchScreen(R.id.shoppingAppSubtitleTextView, "Don't forget to buy me")
         }
     }
 
@@ -31,7 +34,7 @@ class NavigationTests {
     fun workTrackerScreenDisplaysWhenWorkTrackerTabIsTapped() {
         navigate {
             goToWorkTracker()
-            matchScreen(R.id.workAppSubtitleTextView,"Stuff to get done at work")
+            matchScreen(R.id.workAppSubtitleTextView, "Stuff to get done at work")
         }
     }
 

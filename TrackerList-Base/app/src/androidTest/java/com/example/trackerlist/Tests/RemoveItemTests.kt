@@ -1,6 +1,8 @@
-package com.example.trackerlist
+package com.example.trackerlist.Tests
 
 import androidx.test.ext.junit.rules.ActivityScenarioRule
+import com.example.trackerlist.MainActivity
+import com.example.trackerlist.Robots.removeItem
 import org.junit.Rule
 import org.junit.Test
 

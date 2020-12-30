@@ -22,10 +22,10 @@ class HomeFragment : Fragment() {
         // Initialize the array lists and the adapter
         val itemList = arrayListOf<String>()
         val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_multiple_choice, itemList)
-        val add = view.findViewById<Button>(R.id.homeAddButton)
-        val clear = view.findViewById<Button>(R.id.homeClearButton)
-        val delete = view.findViewById<Button>(R.id.homeDeleteButton)
-        val editText = view.findViewById<EditText>(R.id.homeAddItemEditText)
+        val add = view.findViewById<Button>(R.id.addButton)
+        val clear = view.findViewById<Button>(R.id.clearButton)
+        val delete = view.findViewById<Button>(R.id.deleteButton)
+        val editText = view.findViewById<EditText>(R.id.addItemEditText)
         val listView = view.findViewById<ListView>(R.id.homeTrackerListView)
 
         // Add items to list when "add" button is tapped

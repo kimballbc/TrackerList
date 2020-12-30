@@ -15,7 +15,7 @@
             android:text="@string/tab_1_name" />
 
         <EditText
-            android:id="@+id/workAddItemEditText"
+            android:id="@+id/addItemEditText"
             style="@style/edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -27,12 +27,12 @@
             android:id="@+id/workButtonLinearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/workAddItemEditText"
+            android:layout_below="@+id/addItemEditText"
             android:orientation="horizontal"
             android:padding="10dp">
 
             <Button
-                android:id="@+id/workAddButton"
+                android:id="@+id/addButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -41,7 +41,7 @@
                 android:text="@string/add_button" />
 
             <Button
-                android:id="@+id/workDeleteButton"
+                android:id="@+id/deleteButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
@@ -50,7 +50,7 @@
                 android:text="@string/delete_button" />
 
             <Button
-                android:id="@+id/workClearButton"
+                android:id="@+id/clearButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"

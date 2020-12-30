@@ -21,10 +21,10 @@ class ShoppingFragment : Fragment() {
         // Initialize the array lists and the adapter
         val itemList = arrayListOf<String>()
         val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_multiple_choice, itemList)
-        val add = view.findViewById<Button>(R.id.shoppingAddButton)
-        val clear = view.findViewById<Button>(R.id.shoppingClearButton)
-        val delete = view.findViewById<Button>(R.id.shoppingDeleteButton)
-        val editText = view.findViewById<EditText>(R.id.shoppingAddItemEditText)
+        val add = view.findViewById<Button>(R.id.addButton)
+        val clear = view.findViewById<Button>(R.id.clearButton)
+        val delete = view.findViewById<Button>(R.id.deleteButton)
+        val editText = view.findViewById<EditText>(R.id.addItemEditText)
         val listView = view.findViewById<ListView>(R.id.shoppingTrackerListView)
 
         // Add items to list when "add" button is tapped

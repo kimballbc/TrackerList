@@ -1,6 +1,9 @@
-package com.example.trackerlist
+package com.example.trackerlist.Tests
 
 import androidx.test.ext.junit.rules.ActivityScenarioRule
+import com.example.trackerlist.MainActivity
+import com.example.trackerlist.Robots.addItem
+import com.example.trackerlist.Robots.navigate
 import com.example.trackerlist.utils.*
 import org.junit.Rule
 import org.junit.Test
@@ -10,10 +13,10 @@ class AddItemTests {
     val activityRule = ActivityScenarioRule(MainActivity::class.java)
 
     @Test
-    fun addItemToWorkTracker() {
+    fun addItemToList() {
         addItem {
-            addItemToWorkTrackerRobot(KEYS)
-            addItemToWorkTrackerRobot(WALLET)
+            loadList()
+            checkItemAtPositionInList(PHONE, 2)
         }
     }
 }
